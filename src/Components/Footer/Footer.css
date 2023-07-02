@@ -1,0 +1,19 @@
+footer {
+  background-color: #6278f7;
+}
+
+footer div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 16px
+}
+
+footer div img {
+  max-height: 64px;
+}
+
+.footer-social img{
+  margin-right: 16px;
+  max-height: 16px;
+}
