@@ -5,17 +5,6 @@ import TextField from '../TextField';
 import './Form.css';
 
 const Form = (props) => {
-
-  const teams = [
-    'Programação',
-    'Front-end',
-    'Data Science',
-    'Devops',
-    'UX e Desing',
-    'Mobile',
-    'Inovação e Gestão'
-  ]
-
   const [name, setName] = useState('');
   const [office, setOffice] = useState('');
   const [image, setImage] = useState('');
@@ -29,6 +18,10 @@ const Form = (props) => {
       image,
       team
     })
+    setName('');
+    setOffice('');
+    setImage('');
+    setTeam('');
   }
 
   return (
@@ -58,7 +51,7 @@ const Form = (props) => {
         <DropdownList 
           required={true} 
           label="Time" 
-          itens={teams}
+          itens={props.teamsName}
           value={team}
           onChanged={value => setTeam(value)}
           />
