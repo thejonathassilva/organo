@@ -1,12 +1,13 @@
 import './DropdownList.css';
 
-const DropdownList = (props) => {
+const DropdownList = ({value, label, itens, required, onChanged}) => {
 
   return (
     <div className='dropdown-list'>
-      <label>{props.label}</label>
-      <select onChange={event => props.onChanged(event.target.value)} required={props.required} value={props.value}>
-        {props.itens.map(item => <option key={item}>{item}</option>)}
+      <label>{label}</label>
+      <select onChange={event => onChanged(event.target.value)} required={required} value={value}>
+        <option value=""></option>
+        {itens.map(item => <option key={item}>{item}</option>)}
       </select>
     </div>
   )
