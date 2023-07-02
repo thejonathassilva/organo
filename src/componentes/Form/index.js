@@ -1,11 +1,12 @@
+import { useState } from 'react';
 import Button from '../Button';
 import DropdownList from '../DropdownList';
 import TextField from '../TextField';
 import './Form.css';
 
-const Form = () => {
+const Form = (props) => {
 
-  const team = [
+  const teams = [
     'Programação',
     'Front-end',
     'Data Science',
@@ -15,19 +16,52 @@ const Form = () => {
     'Inovação e Gestão'
   ]
 
+  const [name, setName] = useState('');
+  const [office, setOffice] = useState('');
+  const [image, setImage] = useState('');
+  const [team, setTeam] = useState('');
+
   const onSave = (event) => {
     event.preventDefault();
-    console.log('Form foi submetido');
+    props.onRegisteredCooperator({
+      name,
+      office,
+      image,
+      team
+    })
   }
 
   return (
     <section className="form">
       <form onSubmit={onSave}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
-        <TextField required={true} label="Nome" placeholder="Digite o seu nome"/>
-        <TextField required={true} label="Cargo" placeholder="Digite o seu cargo"/>
-        <TextField label="Imagem" placeholder="Digite o endereço da imagem"/>
-        <DropdownList required={true} labbel="Time" itens={team}/>
+        <TextField 
+          required={true} 
+          label="Nome" 
+          placeholder="Digite o seu nome"
+          value={name}
+          onChanged={value => setName(value)}
+          />
+        <TextField 
+          required={true} 
+          label="Cargo" 
+          placeholder="Digite o seu cargo"
+          value={office}
+          onChanged={value => setOffice(value)}
+          />
+        <TextField 
+          label="Imagem" 
+          placeholder="Digite o endereço da imagem"
+          value={image}
+          onChanged={value => setImage(value)}
+          />
+        <DropdownList 
+          required={true} 
+          label="Time" 
+          itens={teams}
+          value={team}
+          onChanged={value => setTeam(value)}
+          />
         <Button>
           Criar card
         </Button>
