@@ -1,3 +1,4 @@
+import Button from '../Button';
 import DropdownList from '../DropdownList';
 import TextField from '../TextField';
 import './Form.css';
@@ -14,14 +15,22 @@ const Form = () => {
     'Inovação e Gestão'
   ]
 
+  const onSave = (event) => {
+    event.preventDefault();
+    console.log('Form foi submetido');
+  }
+
   return (
     <section className="form">
-      <form>
+      <form onSubmit={onSave}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
-        <TextField label="Nome" placeholder="Digite o seu nome"/>
-        <TextField label="Cargo" placeholder="Digite o seu cargo"/>
+        <TextField required={true} label="Nome" placeholder="Digite o seu nome"/>
+        <TextField required={true} label="Cargo" placeholder="Digite o seu cargo"/>
         <TextField label="Imagem" placeholder="Digite o endereço da imagem"/>
-        <DropdownList labbel="Time" itens={team}/>
+        <DropdownList required={true} labbel="Time" itens={team}/>
+        <Button>
+          Criar card
+        </Button>
       </form>
     </section>
   )
