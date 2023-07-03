@@ -3,71 +3,262 @@ import Banner from './Components/Banner';
 import Form from './Components/Form';
 import Team from './Components/Team';
 import Footer from './Components/Footer';
+import { v4 as newId } from 'uuid';
 
 function App() {
   
-  const teams = [
-    { 
+  const [teams, setTeams] = useState([
+    {
+      id: newId(),
       name: 'Programação',
-      primaryColor: '#57c278',
-      secondaryColor: '#d9f7e9'
+      color: '#57c278'
     },
     { 
+      id: newId(),
       name: 'Front-end',
-      primaryColor: '#82cffa',
-      secondaryColor: '#e8f8ff'
+      color: '#82cffa'
     },
     { 
+      id: newId(),
       name: 'Data Science',
-      primaryColor: '#a6d157',
-      secondaryColor: '#f0f8e2'
+      color: '#a6d157'
     },
     { 
+      id: newId(),
       name: 'Devops',
-      primaryColor: '#e06b69',
-      secondaryColor: '#fde7e8'
+      color: '#e06b69'
     },
     { 
+      id: newId(),
       name: 'UX e Desing',
-      primaryColor: '#db6ebf',
-      secondaryColor: '#fae9f5'
+      color: '#db6ebf'
     },
     { 
+      id: newId(),
       name: 'Mobile',
-      primaryColor: '#ffba05',
-      secondaryColor: '#fff5d9'
+      color: '#ffba05'
     },
     { 
+      id: newId(),
       name: 'Inovação e Gestão',
-      primaryColor: '#ff8a29',
-      secondaryColor: '#ffeedf'
+      color: '#ff8a29'
     }
-  ]
+  ]);
 
-  const [cooperators, setCooperators] = useState([]);
+  const beggin = [
+    {
+      id: newId(),
+      name: 'JULIANA AMOASEI',
+      office: 'Desenvolvedora de software e instrutora',
+      image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      team: teams[0].name
+    },
+    {
+      id: newId(),
+      name: 'DANIEL ARTINE',
+      office: 'Engenheiro de Software na Stone Age',
+      image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      team: teams[0].name
+    },
+    {
+      id: newId(),
+      name: 'GUILHERME LIMA',
+      office: 'Desenvolvedor Python e JavaScript na Alura',
+      image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      team: teams[0].name
+    },
+    {
+      id: newId(),
+      name: 'PAULO SILVEIRA',
+      office: 'Hipster e CEO da Alura',
+      image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      team: teams[0].name
+    },
+    {
+      id: newId(),
+      name: 'JULIANA AMOASEI',
+      office: 'Desenvolvedora de software e instrutora',
+      image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      team: teams[1].name
+    },
+    {
+      id: newId(),
+      name: 'DANIEL ARTINE',
+      office: 'Engenheiro de Software na Stone Age',
+      image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      team: teams[1].name
+    },
+    {
+      id: newId(),
+      name: 'GUILHERME LIMA',
+      office: 'Desenvolvedor Python e JavaScript na Alura',
+      image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      team: teams[1].name
+    },
+    {
+      id: newId(),
+      name: 'PAULO SILVEIRA',
+      office: 'Hipster e CEO da Alura',
+      image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      team: teams[1].name
+    },
+    {
+      id: newId(),
+      name: 'JULIANA AMOASEI',
+      office: 'Desenvolvedora de software e instrutora',
+      image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      team: teams[2].name
+    },
+    {
+      id: newId(),
+      name: 'DANIEL ARTINE',
+      office: 'Engenheiro de Software na Stone Age',
+      image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      team: teams[2].name
+    },
+    {
+      id: newId(),
+      name: 'GUILHERME LIMA',
+      office: 'Desenvolvedor Python e JavaScript na Alura',
+      image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      team: teams[2].name
+    },
+    {
+      id: newId(),
+      name: 'PAULO SILVEIRA',
+      office: 'Hipster e CEO da Alura',
+      image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      team: teams[2].name
+    },
+    {
+      id: newId(),
+      name: 'JULIANA AMOASEI',
+      office: 'Desenvolvedora de software e instrutora',
+      image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      team: teams[3].name
+    },
+    {
+      id: newId(),
+      name: 'DANIEL ARTINE',
+      office: 'Engenheiro de Software na Stone Age',
+      image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      team: teams[3].name
+    },
+    {
+      id: newId(),
+      name: 'GUILHERME LIMA',
+      office: 'Desenvolvedor Python e JavaScript na Alura',
+      image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      team: teams[3].name
+    },
+    {
+      id: newId(),
+      name: 'PAULO SILVEIRA',
+      office: 'Hipster e CEO da Alura',
+      image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      team: teams[3].name
+    },
+    {
+      id: newId(),
+      name: 'JULIANA AMOASEI',
+      office: 'Desenvolvedora de software e instrutora',
+      image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      team: teams[4].name
+    },
+    {
+      id: newId(),
+      name: 'DANIEL ARTINE',
+      office: 'Engenheiro de Software na Stone Age',
+      image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      team: teams[4].name
+    },
+    {
+      id: newId(),
+      name: 'GUILHERME LIMA',
+      office: 'Desenvolvedor Python e JavaScript na Alura',
+      image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      team: teams[4].name
+    },
+    {
+      id: newId(),
+      name: 'PAULO SILVEIRA',
+      office: 'Hipster e CEO da Alura',
+      image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      team: teams[4].name
+    },
+    {
+      id: newId(),
+      name: 'JULIANA AMOASEI',
+      office: 'Desenvolvedora de software e instrutora',
+      image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
+      team: teams[5].name
+    },
+    {
+      id: newId(),
+      name: 'DANIEL ARTINE',
+      office: 'Engenheiro de Software na Stone Age',
+      image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
+      team: teams[5].name
+    },
+    {
+      id: newId(),
+      name: 'GUILHERME LIMA',
+      office: 'Desenvolvedor Python e JavaScript na Alura',
+      image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
+      team: teams[5].name
+    },
+    {
+      id: newId(),
+      name: 'PAULO SILVEIRA',
+      office: 'Hipster e CEO da Alura',
+      image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
+      team: teams[5].name
+    },
+  ];
+
+  const [cooperators, setCooperators] = useState(beggin);
 
   const onNewCooperatorInclude = (cooperator) => {
     setCooperators([...cooperators, cooperator])
   }
 
-  function deletingCooperator() {
-    console.log('deletando colaborador');
+  
+  function deletingCooperator(id) {
+    return setCooperators(cooperators.filter(cooperator => cooperator.id !== id));
+  }
+  
+  function changeColorOfTeam(color, id) {
+    setTeams(teams.map(team => {
+      if(team.id === id) {
+        team.color = color;
+      }
+      return team;
+    }))
+  }
+
+  function createTeam(name, color) {
+    setTeams([...teams, {name, color, id: newId()}])
   }
 
   return (
     <div className="App">
       <Banner />
-      <Form teamsName={teams.map(team => team.name)} onRegisteredCooperator={cooperator => onNewCooperatorInclude(cooperator)} />
+      <Form 
+        createTeam={createTeam}
+        teamsName={teams.map(team => team.name)} 
+        onRegisteredCooperator={cooperator => onNewCooperatorInclude(cooperator)} 
+      />
       {teams.map(team => 
       <Team 
+        id={team.id}
+        changeColor={changeColorOfTeam}
         key={team.name} 
         name={team.name} 
-        primaryColor={team.primaryColor} 
-        secondaryColor={team.secondaryColor}
+        color={team.color}
         cooperators={cooperators.filter(cooperator => cooperator.team === team.name)}
         onDelete={deletingCooperator}
-        />)}
-        <Footer/>
+      />)}
+      <Footer/>
     </div>
   );
 }

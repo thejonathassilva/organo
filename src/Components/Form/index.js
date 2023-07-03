@@ -4,15 +4,17 @@ import DropdownList from '../DropdownList';
 import TextField from '../TextField';
 import './Form.css';
 
-const Form = (props) => {
+const Form = ({onRegisteredCooperator, teamsName, createTeam}) => {
   const [name, setName] = useState('');
   const [office, setOffice] = useState('');
   const [image, setImage] = useState('');
   const [team, setTeam] = useState('');
+  const [nameTeam, setNameTeam] = useState('');
+  const [color, setColor] = useState('');
 
   const onSave = (event) => {
     event.preventDefault();
-    props.onRegisteredCooperator({
+    onRegisteredCooperator({
       name,
       office,
       image,
@@ -29,14 +31,14 @@ const Form = (props) => {
       <form onSubmit={onSave}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
         <TextField 
-          required={true} 
+          required 
           label="Nome" 
           placeholder="Digite o seu nome"
           value={name}
           onChanged={value => setName(value)}
           />
         <TextField 
-          required={true} 
+          required 
           label="Cargo" 
           placeholder="Digite o seu cargo"
           value={office}
@@ -49,14 +51,37 @@ const Form = (props) => {
           onChanged={value => setImage(value)}
           />
         <DropdownList 
-          required={true} 
+          required 
           label="Time" 
-          itens={props.teamsName}
+          itens={teamsName}
           value={team}
           onChanged={value => setTeam(value)}
           />
         <Button>
           Criar card
+        </Button>
+      </form>
+      <form onSubmit={(event) => {
+        event.preventDefault();
+        createTeam(nameTeam, color);
+      }}>
+        <h2>Preencha os dados para criar um novo time</h2>
+        <TextField 
+          required 
+          label="Nome" 
+          placeholder="Digite o nome do time"
+          value={nameTeam}
+          onChanged={value => setNameTeam(value)}
+          />
+        <TextField 
+          required 
+          label="Cor" 
+          placeholder="Digite a cor do time"
+          value={color}
+          onChanged={value => setColor(value)}
+          />
+        <Button>
+          Criar um novo time
         </Button>
       </form>
     </section>
