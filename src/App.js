@@ -50,16 +50,22 @@ function App() {
     setCooperators([...cooperators, cooperator])
   }
 
+  function deletingCooperator() {
+    console.log('deletando colaborador');
+  }
+
   return (
     <div className="App">
       <Banner />
       <Form teamsName={teams.map(team => team.name)} onRegisteredCooperator={cooperator => onNewCooperatorInclude(cooperator)} />
-      {teams.map(team => <Team 
+      {teams.map(team => 
+      <Team 
         key={team.name} 
         name={team.name} 
         primaryColor={team.primaryColor} 
         secondaryColor={team.secondaryColor}
         cooperators={cooperators.filter(cooperator => cooperator.team === team.name)}
+        onDelete={deletingCooperator}
         />)}
         <Footer/>
     </div>

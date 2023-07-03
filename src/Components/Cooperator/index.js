@@ -1,8 +1,10 @@
+import { AiTwotoneCloseCircle } from 'react-icons/ai'
 import './Cooperator.css'
 
-const Cooperator = ({name, image, office, backgroundColor}) => {
+const Cooperator = ({name, image, office, backgroundColor, onDelete}) => {
   return (
     <div className='cooperator'>
+      <AiTwotoneCloseCircle size={24} color='#c4302b' className='delete' onClick={onDelete}/>
       <div className='header' style={{ backgroundColor: backgroundColor}}>
         <img src={image} alt={name}></img>
       </div>
