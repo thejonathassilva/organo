@@ -2,7 +2,7 @@ import hexToRgba from 'hex-to-rgba';
 import Cooperator from '../Cooperator';
 import './Team.css'
 
-const Team = ({ id, name, color, cooperators, onDelete, changeColor}) => {
+const Team = ({ id, name, color, cooperators, onDelete, changeColor, byFavorite}) => {
   return (
     cooperators.length > 0 ? 
     <section className='team' style={{ backgroundImage: 'url(/imagens/fundo.png)', backgroundColor: hexToRgba(color, 0.2) }}> 
@@ -16,8 +16,11 @@ const Team = ({ id, name, color, cooperators, onDelete, changeColor}) => {
             key={cooperator.name}  
             name={cooperator.name} 
             office={cooperator.office} 
+            favorite={cooperator.favorite}
             image={cooperator.image}
-            onDelete={onDelete}/>
+            onDelete={onDelete}
+            byFavorite={byFavorite}
+            />
             }
           )}
       </div>

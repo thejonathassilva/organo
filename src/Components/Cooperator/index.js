@@ -1,7 +1,16 @@
-import { AiTwotoneCloseCircle } from 'react-icons/ai'
+import { AiTwotoneCloseCircle, AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import './Cooperator.css'
 
-const Cooperator = ({id, name, image, office, backgroundColor, onDelete}) => {
+const Cooperator = ({id, name, image, office, backgroundColor, onDelete, favorite, byFavorite}) => {
+  function favoriting() {
+    byFavorite(id);
+  }
+
+  const propsFavorite = {
+    size: 24,
+    onClick: favoriting
+  }
+
   return (
     <div className='cooperator'>
       <AiTwotoneCloseCircle 
@@ -16,6 +25,11 @@ const Cooperator = ({id, name, image, office, backgroundColor, onDelete}) => {
       <div className='footer'>
         <h4>{name}</h4>
         <h5>{office}</h5>
+        <div className='favorite'>
+          {favorite 
+            ? <AiFillStar { ...propsFavorite } color='#ff0000'/> 
+            : <AiOutlineStar { ...propsFavorite }/>}
+        </div>
       </div>
     </div>
   )

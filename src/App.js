@@ -49,6 +49,7 @@ function App() {
     {
       id: newId(),
       name: 'JULIANA AMOASEI',
+      favorite: false,
       office: 'Desenvolvedora de software e instrutora',
       image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
       team: teams[0].name
@@ -56,6 +57,7 @@ function App() {
     {
       id: newId(),
       name: 'DANIEL ARTINE',
+      favorite: false,
       office: 'Engenheiro de Software na Stone Age',
       image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
       team: teams[0].name
@@ -63,6 +65,7 @@ function App() {
     {
       id: newId(),
       name: 'GUILHERME LIMA',
+      favorite: false,
       office: 'Desenvolvedor Python e JavaScript na Alura',
       image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
       team: teams[0].name
@@ -70,6 +73,7 @@ function App() {
     {
       id: newId(),
       name: 'PAULO SILVEIRA',
+      favorite: false,
       office: 'Hipster e CEO da Alura',
       image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
       team: teams[0].name
@@ -77,6 +81,7 @@ function App() {
     {
       id: newId(),
       name: 'JULIANA AMOASEI',
+      favorite: false,
       office: 'Desenvolvedora de software e instrutora',
       image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
       team: teams[1].name
@@ -84,6 +89,7 @@ function App() {
     {
       id: newId(),
       name: 'DANIEL ARTINE',
+      favorite: false,
       office: 'Engenheiro de Software na Stone Age',
       image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
       team: teams[1].name
@@ -91,6 +97,7 @@ function App() {
     {
       id: newId(),
       name: 'GUILHERME LIMA',
+      favorite: false,
       office: 'Desenvolvedor Python e JavaScript na Alura',
       image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
       team: teams[1].name
@@ -98,6 +105,7 @@ function App() {
     {
       id: newId(),
       name: 'PAULO SILVEIRA',
+      favorite: false,
       office: 'Hipster e CEO da Alura',
       image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
       team: teams[1].name
@@ -105,6 +113,7 @@ function App() {
     {
       id: newId(),
       name: 'JULIANA AMOASEI',
+      favorite: false,
       office: 'Desenvolvedora de software e instrutora',
       image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
       team: teams[2].name
@@ -112,6 +121,7 @@ function App() {
     {
       id: newId(),
       name: 'DANIEL ARTINE',
+      favorite: false,
       office: 'Engenheiro de Software na Stone Age',
       image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
       team: teams[2].name
@@ -119,6 +129,7 @@ function App() {
     {
       id: newId(),
       name: 'GUILHERME LIMA',
+      favorite: false,
       office: 'Desenvolvedor Python e JavaScript na Alura',
       image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
       team: teams[2].name
@@ -126,6 +137,7 @@ function App() {
     {
       id: newId(),
       name: 'PAULO SILVEIRA',
+      favorite: false,
       office: 'Hipster e CEO da Alura',
       image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
       team: teams[2].name
@@ -133,6 +145,7 @@ function App() {
     {
       id: newId(),
       name: 'JULIANA AMOASEI',
+      favorite: false,
       office: 'Desenvolvedora de software e instrutora',
       image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
       team: teams[3].name
@@ -140,6 +153,7 @@ function App() {
     {
       id: newId(),
       name: 'DANIEL ARTINE',
+      favorite: false,
       office: 'Engenheiro de Software na Stone Age',
       image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
       team: teams[3].name
@@ -147,6 +161,7 @@ function App() {
     {
       id: newId(),
       name: 'GUILHERME LIMA',
+      favorite: false,
       office: 'Desenvolvedor Python e JavaScript na Alura',
       image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
       team: teams[3].name
@@ -154,6 +169,7 @@ function App() {
     {
       id: newId(),
       name: 'PAULO SILVEIRA',
+      favorite: false,
       office: 'Hipster e CEO da Alura',
       image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
       team: teams[3].name
@@ -161,6 +177,7 @@ function App() {
     {
       id: newId(),
       name: 'JULIANA AMOASEI',
+      favorite: false,
       office: 'Desenvolvedora de software e instrutora',
       image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
       team: teams[4].name
@@ -168,6 +185,7 @@ function App() {
     {
       id: newId(),
       name: 'DANIEL ARTINE',
+      favorite: false,
       office: 'Engenheiro de Software na Stone Age',
       image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
       team: teams[4].name
@@ -175,6 +193,7 @@ function App() {
     {
       id: newId(),
       name: 'GUILHERME LIMA',
+      favorite: false,
       office: 'Desenvolvedor Python e JavaScript na Alura',
       image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
       team: teams[4].name
@@ -182,6 +201,7 @@ function App() {
     {
       id: newId(),
       name: 'PAULO SILVEIRA',
+      favorite: false,
       office: 'Hipster e CEO da Alura',
       image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
       team: teams[4].name
@@ -189,6 +209,7 @@ function App() {
     {
       id: newId(),
       name: 'JULIANA AMOASEI',
+      favorite: false,
       office: 'Desenvolvedora de software e instrutora',
       image: 'https://www.alura.com.br/assets/img/lideres/juliana-amoasei.1647533644.jpeg',
       team: teams[5].name
@@ -196,6 +217,7 @@ function App() {
     {
       id: newId(),
       name: 'DANIEL ARTINE',
+      favorite: false,
       office: 'Engenheiro de Software na Stone Age',
       image: 'https://www.alura.com.br/assets/img/lideres/daniel-artine.1647533644.jpeg',
       team: teams[5].name
@@ -203,6 +225,7 @@ function App() {
     {
       id: newId(),
       name: 'GUILHERME LIMA',
+      favorite: false,
       office: 'Desenvolvedor Python e JavaScript na Alura',
       image: '	https://www.alura.com.br/assets/img/lideres/guilherme-lima.1647533644.jpeg',
       team: teams[5].name
@@ -210,6 +233,7 @@ function App() {
     {
       id: newId(),
       name: 'PAULO SILVEIRA',
+      favorite: false,
       office: 'Hipster e CEO da Alura',
       image: 'https://www.alura.com.br/assets/img/lideres/paulo-silveira.1647533644.jpeg',
       team: teams[5].name
@@ -240,6 +264,15 @@ function App() {
     setTeams([...teams, {name, color, id: newId()}])
   }
 
+  function resolveFavorite(id) {
+    setCooperators(cooperators.map(cooperator => {
+      if(cooperator.id === id) {
+        cooperator.favorite = !cooperator.favorite;
+      }
+      return cooperator;
+    }))
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -257,6 +290,7 @@ function App() {
         color={team.color}
         cooperators={cooperators.filter(cooperator => cooperator.team === team.name)}
         onDelete={deletingCooperator}
+        byFavorite={resolveFavorite}
       />)}
       <Footer/>
     </div>

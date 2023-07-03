@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import Button from '../Button';
 import DropdownList from '../DropdownList';
-import TextField from '../TextField';
+import Field from '../Field';
 import './Form.css';
 
 const Form = ({onRegisteredCooperator, teamsName, createTeam}) => {
@@ -30,21 +30,21 @@ const Form = ({onRegisteredCooperator, teamsName, createTeam}) => {
     <section className="form">
       <form onSubmit={onSave}>
         <h2>Preencha os dados para criar o card do colaborador</h2>
-        <TextField 
+        <Field 
           required 
           label="Nome" 
           placeholder="Digite o seu nome"
           value={name}
           onChanged={value => setName(value)}
           />
-        <TextField 
+        <Field 
           required 
           label="Cargo" 
           placeholder="Digite o seu cargo"
           value={office}
           onChanged={value => setOffice(value)}
           />
-        <TextField 
+        <Field 
           label="Imagem" 
           placeholder="Digite o endereço da imagem"
           value={image}
@@ -66,14 +66,15 @@ const Form = ({onRegisteredCooperator, teamsName, createTeam}) => {
         createTeam(nameTeam, color);
       }}>
         <h2>Preencha os dados para criar um novo time</h2>
-        <TextField 
+        <Field 
           required 
           label="Nome" 
           placeholder="Digite o nome do time"
           value={nameTeam}
           onChanged={value => setNameTeam(value)}
           />
-        <TextField 
+        <Field 
+          type='color'
           required 
           label="Cor" 
           placeholder="Digite a cor do time"
